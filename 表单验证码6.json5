@@ -1,0 +1,114 @@
+{
+  scripts: [
+    {
+      delay: 206,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.33177083333333335%",
+        "0.4638888888888889%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 202,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.146875%",
+        "0.4981481481481482%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 202,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.10677083333333333%",
+        "0.5212962962962963%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 452,
+      event_type: "EM",
+      action_type: "mouse left down",
+      action: [
+        "0.09166666666666666%",
+        "0.5046296296296297%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 379,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.09166666666666666%",
+        "0.5046296296296297%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 203,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.19010416666666666%",
+        "0.5148148148148148%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 202,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.27239583333333334%",
+        "0.5037037037037037%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 216,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.29635416666666664%",
+        "0.5027777777777778%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 104,
+      event_type: "EM",
+      action_type: "mouse left up",
+      action: [
+        "0.296875%",
+        "0.5027777777777778%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 671,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.296875%",
+        "0.5027777777777778%",
+      ],
+      type: "event",
+    },
+    {
+      delay: 202,
+      event_type: "EM",
+      action_type: "mouse move",
+      action: [
+        "0.39479166666666665%",
+        "0.44074074074074077%",
+      ],
+      type: "event",
+    },
+  ],
+}
