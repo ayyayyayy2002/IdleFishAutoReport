@@ -7,36 +7,23 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-import time
 import random
-
-
-
-
-
-
-
-
-
-
 import time
 
 
-def ease_out_quart(x):
-    return 1 - pow(1 - x, 4)
-
-def accelerate_drag(distance=500, duration=0.5):
-    start_x, start_y = pyautogui.position()
-    jitter = random.uniform(-300, 300)  # 添加上下±3像素随机扰动
-    pyautogui.mouseDown()
-    pyautogui.moveTo(start_x + distance, start_y+jitter, duration=duration, tween=ease_out_quart)
-    pyautogui.mouseUp()
+def ease_out_quart(t):
+    return 1 - pow(1 - t, 4)
 
 
-
-
-
-
+# 生成从 (x0, y0) 到 (x1, y1) 的缓动轨迹
+def generate_track(x0, y0, x1, y1, steps=60):
+    track = []
+    for i in range(steps + 1):
+        t = i / steps
+        xt = x0 + (x1 - x0) * ease_out_quart(t)
+        yt = y0 + (y1 - y0) * ease_out_quart(t)
+        track.append([xt - x0, yt - y0])  # 相对坐标
+    return track
 
 
 
@@ -218,133 +205,62 @@ for uid in uids:
             )
             element_submit_report.click()
             print('提交表单')
-            time.sleep(2)
-            max_attempts = 10
+            time.sleep(1.5)
+            max_attempts = 3
             attempts = 0
 
-            while attempts < max_attempts:
-                try:
-                    element = driver.find_element(By.XPATH, '//*[@id="baxia-dialog-content"]')
-                    if element.is_displayed():
-                        print('发现验证码')
-                        iframe = driver.find_element(By.ID, "baxia-dialog-content")
-                        driver.switch_to.frame(iframe)
-                        slider = driver.find_element(By.ID, 'nc_1_n1z')  # 你的滑块元素
 
-                        rect = slider.rect
-                        x0 = rect['x'] + rect['width'] / 2
-                        y0 = rect['y'] + rect['height'] / 2
-                        distance = 500
-                        jitter = random.uniform(-300, 300)
-                        import math
+            print('发现验证码')
+            iframe = driver.find_element(By.ID, "baxia-dialog-content")
+            driver.switch_to.frame(iframe)
+            slider = WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.ID, 'nc_1_n1z'))
+            )
+            rect = slider.rect
+            x0 = rect['x'] + rect['width'] / 2
+            y0 = rect['y'] + rect['height'] / 2
+            distance = 500
+            jitter = random.uniform(-300, 300)
+            track = generate_track(x0, y0, x0 + distance, y0 + jitter)
 
+            # 拖动滑块的 JS 脚本
+            drag_script = """
+            const element = arguments[0];
+            const moves = arguments[1];
+            const callback = arguments[arguments.length - 1];  // Selenium 提供的回调
 
-                        # 缓出函数
-                        def ease_out_quart(t):
-                            return 1 - pow(1 - t, 4)
+            const rect = element.getBoundingClientRect();
+            const startX = rect.left + rect.width / 2;
+            const startY = rect.top + rect.height / 2;
 
+            const dispatchMouseEvent = (type, x, y) => {
+                const event = new MouseEvent(type, {
+                    clientX: x,
+                    clientY: y,
+                    bubbles: true
+                });
+                element.dispatchEvent(event);
+            };
 
-                        # 生成从 (x0, y0) 到 (x1, y1) 的缓动轨迹
-                        def generate_track(x0, y0, x1, y1, steps=60):
-                            track = []
-                            for i in range(steps + 1):
-                                t = i / steps
-                                xt = x0 + (x1 - x0) * ease_out_quart(t)
-                                yt = y0 + (y1 - y0) * ease_out_quart(t)
-                                track.append([xt - x0, yt - y0])  # 相对坐标
-                            return track
+            dispatchMouseEvent('mousedown', startX, startY);
 
+            let i = 0;
+            function step() {
+                if (i >= moves.length) {
+                    dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
+                    callback();  // 告诉 Selenium 异步执行结束
+                    return;
+                }
+                const [dx, dy] = moves[i];
+                dispatchMouseEvent('mousemove', startX + dx, startY + dy);
+                i++;
+                requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+            """
 
-                        # 生成轨迹
-                        track = generate_track(x0, y0, x0 + distance, y0 + jitter)
+            driver.execute_async_script(drag_script, slider, track)
 
-                        # 拖动滑块的 JS 脚本
-                        drag_script = """
-                        const element = arguments[0];
-                        const moves = arguments[1];
-                        const rect = element.getBoundingClientRect();
-                        const startX = rect.left + rect.width / 2;
-                        const startY = rect.top + rect.height / 2;
-
-                        const dispatchMouseEvent = (type, x, y) => {
-                            const event = new MouseEvent(type, {
-                                clientX: x,
-                                clientY: y,
-                                bubbles: true
-                            });
-                            element.dispatchEvent(event);
-                        };
-
-                        dispatchMouseEvent('mousedown', startX, startY);
-
-                        let i = 0;
-                        function step() {
-                            if (i >= moves.length) {
-                                dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
-                                return;
-                            }
-                            const [dx, dy] = moves[i];
-                            dispatchMouseEvent('mousemove', startX + dx, startY + dy);
-                            i++;
-                            requestAnimationFrame(step);
-                        }
-                        requestAnimationFrame(step);
-                        """
-
-                        # 执行拖动
-                        driver.execute_script(drag_script, slider, track)
-
-                        # 等待动画结束
-                        time.sleep(3)
-
-
-
-
-
-
-
-
-                        '''
-
-                        import pyautogui
-
-                        button_location = pyautogui.locateOnScreen('button.png', confidence=0.8)
-
-                        if button_location:
-                            print(f"按钮位置：{button_location}")
-
-                            # 计算中心点坐标
-                            center_x = button_location.left + button_location.width // 2
-                            center_y = button_location.top + button_location.height // 2
-                            print(f"中心点坐标：({center_x}, {center_y})")
-
-                            # 移动鼠标到中心点
-                            pyautogui.moveTo(center_x, center_y, duration=0.3)
-                        else:
-                            print("❌ 没找到按钮图像")
-
-                        accelerate_drag(distance=500, duration=0.5)
-                        '''
-
-
-
-
-
-
-
-
-
-
-
-                    else:
-                        print("元素不可见")
-                        break
-                except Exception:
-                    print("未找到验证码元素")
-                    break
-            else:
-                print("达到最大尝试次数，停止处理验证码")
-                exit(200)
 
 
 
