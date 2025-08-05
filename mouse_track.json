@@ -1,0 +1,2482 @@
+[
+  {
+    "time": 0.0,
+    "type": "ButtonEvent",
+    "event_type": "down",
+    "button": "right",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 0.11162495613098145,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 869,
+    "y": 1308
+  },
+  {
+    "time": 0.11162495613098145,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "right",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 0.11941003799438477,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 869,
+    "y": 1308
+  },
+  {
+    "time": 0.12738966941833496,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 867,
+    "y": 1308
+  },
+  {
+    "time": 0.13536906242370605,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 864,
+    "y": 1308
+  },
+  {
+    "time": 0.14271283149719238,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 862,
+    "y": 1308
+  },
+  {
+    "time": 0.15069222450256348,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 860,
+    "y": 1308
+  },
+  {
+    "time": 0.15869712829589844,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 857,
+    "y": 1308
+  },
+  {
+    "time": 0.16665983200073242,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 855,
+    "y": 1308
+  },
+  {
+    "time": 0.1751871109008789,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 854,
+    "y": 1308
+  },
+  {
+    "time": 0.1831660270690918,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 853,
+    "y": 1308
+  },
+  {
+    "time": 0.19114470481872559,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 852,
+    "y": 1308
+  },
+  {
+    "time": 0.19912385940551758,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 851,
+    "y": 1308
+  },
+  {
+    "time": 0.21508002281188965,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 851,
+    "y": 1308
+  },
+  {
+    "time": 0.22308683395385742,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 850,
+    "y": 1308
+  },
+  {
+    "time": 0.23106622695922852,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 849,
+    "y": 1308
+  },
+  {
+    "time": 0.23970651626586914,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 848,
+    "y": 1308
+  },
+  {
+    "time": 0.24712872505187988,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 846,
+    "y": 1308
+  },
+  {
+    "time": 0.25569796562194824,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 845,
+    "y": 1308
+  },
+  {
+    "time": 0.2636122703552246,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 844,
+    "y": 1308
+  },
+  {
+    "time": 0.2716372013092041,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 842,
+    "y": 1308
+  },
+  {
+    "time": 0.27963781356811523,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 842,
+    "y": 1308
+  },
+  {
+    "time": 0.28765010833740234,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 841,
+    "y": 1308
+  },
+  {
+    "time": 0.2953760623931885,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 841,
+    "y": 1308
+  },
+  {
+    "time": 0.30368494987487793,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 839,
+    "y": 1307
+  },
+  {
+    "time": 0.3116939067840576,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 839,
+    "y": 1307
+  },
+  {
+    "time": 0.32770681381225586,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 838,
+    "y": 1307
+  },
+  {
+    "time": 0.3513636589050293,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 838,
+    "y": 1307
+  },
+  {
+    "time": 0.4795560836791992,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 837,
+    "y": 1307
+  },
+  {
+    "time": 0.4876561164855957,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 835,
+    "y": 1307
+  },
+  {
+    "time": 0.4957151412963867,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 835,
+    "y": 1307
+  },
+  {
+    "time": 0.5036373138427734,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 833,
+    "y": 1307
+  },
+  {
+    "time": 0.5117080211639404,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 832,
+    "y": 1307
+  },
+  {
+    "time": 0.5196146965026855,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 829,
+    "y": 1307
+  },
+  {
+    "time": 0.527703046798706,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 828,
+    "y": 1307
+  },
+  {
+    "time": 0.535625696182251,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 825,
+    "y": 1307
+  },
+  {
+    "time": 0.5437192916870117,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 823,
+    "y": 1307
+  },
+  {
+    "time": 0.5516119003295898,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 820,
+    "y": 1307
+  },
+  {
+    "time": 0.5596950054168701,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 817,
+    "y": 1307
+  },
+  {
+    "time": 0.567192792892456,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 814,
+    "y": 1307
+  },
+  {
+    "time": 0.575615406036377,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 811,
+    "y": 1307
+  },
+  {
+    "time": 0.583308219909668,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 808,
+    "y": 1309
+  },
+  {
+    "time": 0.591693639755249,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 804,
+    "y": 1309
+  },
+  {
+    "time": 0.5995011329650879,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 801,
+    "y": 1309
+  },
+  {
+    "time": 0.6077253818511963,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 798,
+    "y": 1309
+  },
+  {
+    "time": 0.6155970096588135,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 793,
+    "y": 1309
+  },
+  {
+    "time": 0.623704195022583,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 786,
+    "y": 1309
+  },
+  {
+    "time": 0.6316077709197998,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 781,
+    "y": 1309
+  },
+  {
+    "time": 0.6397161483764648,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 774,
+    "y": 1309
+  },
+  {
+    "time": 0.6469993591308594,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 766,
+    "y": 1309
+  },
+  {
+    "time": 0.6555652618408203,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 760,
+    "y": 1309
+  },
+  {
+    "time": 0.6627292633056641,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 752,
+    "y": 1309
+  },
+  {
+    "time": 0.671699047088623,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 746,
+    "y": 1309
+  },
+  {
+    "time": 0.6789865493774414,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 742,
+    "y": 1309
+  },
+  {
+    "time": 0.687694787979126,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 738,
+    "y": 1309
+  },
+  {
+    "time": 0.6951065063476562,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 732,
+    "y": 1309
+  },
+  {
+    "time": 0.7036991119384766,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 728,
+    "y": 1309
+  },
+  {
+    "time": 0.7114861011505127,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 722,
+    "y": 1309
+  },
+  {
+    "time": 0.7196104526519775,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 717,
+    "y": 1309
+  },
+  {
+    "time": 0.7274689674377441,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 713,
+    "y": 1309
+  },
+  {
+    "time": 0.7357211112976074,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 710,
+    "y": 1309
+  },
+  {
+    "time": 0.7436270713806152,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 707,
+    "y": 1309
+  },
+  {
+    "time": 0.7509377002716064,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 704,
+    "y": 1309
+  },
+  {
+    "time": 0.758674144744873,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 701,
+    "y": 1309
+  },
+  {
+    "time": 0.767704963684082,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 700,
+    "y": 1309
+  },
+  {
+    "time": 0.7756936550140381,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 697,
+    "y": 1309
+  },
+  {
+    "time": 0.7834582328796387,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 695,
+    "y": 1309
+  },
+  {
+    "time": 0.7916996479034424,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 693,
+    "y": 1309
+  },
+  {
+    "time": 0.7996547222137451,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 691,
+    "y": 1309
+  },
+  {
+    "time": 0.8077001571655273,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 688,
+    "y": 1309
+  },
+  {
+    "time": 0.8154592514038086,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 685,
+    "y": 1310
+  },
+  {
+    "time": 0.8236451148986816,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 683,
+    "y": 1311
+  },
+  {
+    "time": 0.8316617012023926,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 680,
+    "y": 1311
+  },
+  {
+    "time": 0.8396122455596924,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 678,
+    "y": 1311
+  },
+  {
+    "time": 0.8476302623748779,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 675,
+    "y": 1313
+  },
+  {
+    "time": 0.8556973934173584,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 672,
+    "y": 1313
+  },
+  {
+    "time": 0.8636114597320557,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 671,
+    "y": 1313
+  },
+  {
+    "time": 0.8712108135223389,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 669,
+    "y": 1313
+  },
+  {
+    "time": 0.8801167011260986,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 666,
+    "y": 1313
+  },
+  {
+    "time": 0.8876607418060303,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 664,
+    "y": 1313
+  },
+  {
+    "time": 0.8957846164703369,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 664,
+    "y": 1313
+  },
+  {
+    "time": 0.9036960601806641,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 662,
+    "y": 1313
+  },
+  {
+    "time": 0.9115464687347412,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 661,
+    "y": 1313
+  },
+  {
+    "time": 0.9196960926055908,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 661,
+    "y": 1313
+  },
+  {
+    "time": 0.9356138706207275,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 659,
+    "y": 1313
+  },
+  {
+    "time": 0.9997053146362305,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 659,
+    "y": 1313
+  },
+  {
+    "time": 1.0069336891174316,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 658,
+    "y": 1314
+  },
+  {
+    "time": 1.0394763946533203,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 656,
+    "y": 1314
+  },
+  {
+    "time": 1.0476136207580566,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 656,
+    "y": 1314
+  },
+  {
+    "time": 1.0552730560302734,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 655,
+    "y": 1314
+  },
+  {
+    "time": 1.0636112689971924,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 653,
+    "y": 1314
+  },
+  {
+    "time": 1.071394443511963,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 652,
+    "y": 1314
+  },
+  {
+    "time": 1.07969331741333,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 650,
+    "y": 1314
+  },
+  {
+    "time": 1.0873537063598633,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 649,
+    "y": 1314
+  },
+  {
+    "time": 1.0956928730010986,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 647,
+    "y": 1314
+  },
+  {
+    "time": 1.103642225265503,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 646,
+    "y": 1314
+  },
+  {
+    "time": 1.1116926670074463,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 646,
+    "y": 1314
+  },
+  {
+    "time": 1.119567632675171,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 644,
+    "y": 1314
+  },
+  {
+    "time": 1.12770676612854,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 644,
+    "y": 1314
+  },
+  {
+    "time": 1.135728120803833,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 643,
+    "y": 1314
+  },
+  {
+    "time": 1.1596102714538574,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 643,
+    "y": 1314
+  },
+  {
+    "time": 1.1676998138427734,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 642,
+    "y": 1314
+  },
+  {
+    "time": 1.1835908889770508,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 641,
+    "y": 1314
+  },
+  {
+    "time": 1.1916098594665527,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 640,
+    "y": 1314
+  },
+  {
+    "time": 1.2068767547607422,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 640,
+    "y": 1314
+  },
+  {
+    "time": 1.2151248455047607,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 639,
+    "y": 1314
+  },
+  {
+    "time": 1.2870800495147705,
+    "type": "ButtonEvent",
+    "event_type": "down",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 1.3595690727233887,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 638,
+    "y": 1314
+  },
+  {
+    "time": 1.3676121234893799,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 637,
+    "y": 1314
+  },
+  {
+    "time": 1.3756940364837646,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 636,
+    "y": 1314
+  },
+  {
+    "time": 1.3759074211120605,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 1.383683204650879,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 633,
+    "y": 1314
+  },
+  {
+    "time": 1.391704797744751,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 633,
+    "y": 1314
+  },
+  {
+    "time": 1.3987047672271729,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 630,
+    "y": 1314
+  },
+  {
+    "time": 1.4077038764953613,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 628,
+    "y": 1314
+  },
+  {
+    "time": 1.4156851768493652,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 626,
+    "y": 1314
+  },
+  {
+    "time": 1.4237143993377686,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 623,
+    "y": 1314
+  },
+  {
+    "time": 1.4309182167053223,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 620,
+    "y": 1314
+  },
+  {
+    "time": 1.4396939277648926,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 616,
+    "y": 1314
+  },
+  {
+    "time": 1.447143316268921,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 611,
+    "y": 1312
+  },
+  {
+    "time": 1.4556453227996826,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 606,
+    "y": 1312
+  },
+  {
+    "time": 1.4636096954345703,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 600,
+    "y": 1311
+  },
+  {
+    "time": 1.4716198444366455,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 593,
+    "y": 1308
+  },
+  {
+    "time": 1.479611873626709,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 586,
+    "y": 1307
+  },
+  {
+    "time": 1.4873566627502441,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 577,
+    "y": 1307
+  },
+  {
+    "time": 1.4957013130187988,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 567,
+    "y": 1304
+  },
+  {
+    "time": 1.503610610961914,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 557,
+    "y": 1304
+  },
+  {
+    "time": 1.5117006301879883,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 546,
+    "y": 1301
+  },
+  {
+    "time": 1.5194458961486816,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 533,
+    "y": 1300
+  },
+  {
+    "time": 1.527533769607544,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 522,
+    "y": 1298
+  },
+  {
+    "time": 1.53554105758667,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 510,
+    "y": 1297
+  },
+  {
+    "time": 1.5436291694641113,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 498,
+    "y": 1295
+  },
+  {
+    "time": 1.5516653060913086,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 487,
+    "y": 1295
+  },
+  {
+    "time": 1.5596096515655518,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 476,
+    "y": 1295
+  },
+  {
+    "time": 1.5678527355194092,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 467,
+    "y": 1295
+  },
+  {
+    "time": 1.5757052898406982,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 458,
+    "y": 1295
+  },
+  {
+    "time": 1.5836970806121826,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 447,
+    "y": 1295
+  },
+  {
+    "time": 1.5916922092437744,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 436,
+    "y": 1295
+  },
+  {
+    "time": 1.5997610092163086,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 427,
+    "y": 1295
+  },
+  {
+    "time": 1.6077070236206055,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 420,
+    "y": 1295
+  },
+  {
+    "time": 1.6152186393737793,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 411,
+    "y": 1295
+  },
+  {
+    "time": 1.6235740184783936,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 402,
+    "y": 1295
+  },
+  {
+    "time": 1.6311285495758057,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 394,
+    "y": 1295
+  },
+  {
+    "time": 1.6397075653076172,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 386,
+    "y": 1295
+  },
+  {
+    "time": 1.647465705871582,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 379,
+    "y": 1295
+  },
+  {
+    "time": 1.6556251049041748,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 371,
+    "y": 1295
+  },
+  {
+    "time": 1.663548469543457,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 363,
+    "y": 1295
+  },
+  {
+    "time": 1.6716971397399902,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 358,
+    "y": 1295
+  },
+  {
+    "time": 1.679288387298584,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 351,
+    "y": 1295
+  },
+  {
+    "time": 1.6877121925354004,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 343,
+    "y": 1295
+  },
+  {
+    "time": 1.6954021453857422,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 339,
+    "y": 1295
+  },
+  {
+    "time": 1.7036945819854736,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 332,
+    "y": 1295
+  },
+  {
+    "time": 1.7113878726959229,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 328,
+    "y": 1295
+  },
+  {
+    "time": 1.7197365760803223,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 324,
+    "y": 1295
+  },
+  {
+    "time": 1.7275598049163818,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 320,
+    "y": 1295
+  },
+  {
+    "time": 1.7357134819030762,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 317,
+    "y": 1295
+  },
+  {
+    "time": 1.7436585426330566,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 313,
+    "y": 1295
+  },
+  {
+    "time": 1.7516131401062012,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 310,
+    "y": 1295
+  },
+  {
+    "time": 1.7596704959869385,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 308,
+    "y": 1295
+  },
+  {
+    "time": 1.7676970958709717,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 307,
+    "y": 1295
+  },
+  {
+    "time": 1.7748878002166748,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 306,
+    "y": 1295
+  },
+  {
+    "time": 1.8792812824249268,
+    "type": "ButtonEvent",
+    "event_type": "down",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 2.0311789512634277,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 2.2152252197265625,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 306,
+    "y": 1295
+  },
+  {
+    "time": 2.223543167114258,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 306,
+    "y": 1295
+  },
+  {
+    "time": 2.2316126823425293,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 309,
+    "y": 1295
+  },
+  {
+    "time": 2.2395212650299072,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 312,
+    "y": 1295
+  },
+  {
+    "time": 2.2476084232330322,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 318,
+    "y": 1295
+  },
+  {
+    "time": 2.255066156387329,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 323,
+    "y": 1295
+  },
+  {
+    "time": 2.26369047164917,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 331,
+    "y": 1295
+  },
+  {
+    "time": 2.2717196941375732,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 338,
+    "y": 1293
+  },
+  {
+    "time": 2.279690742492676,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 349,
+    "y": 1293
+  },
+  {
+    "time": 2.2866551876068115,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 359,
+    "y": 1293
+  },
+  {
+    "time": 2.2956690788269043,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 373,
+    "y": 1292
+  },
+  {
+    "time": 2.3035542964935303,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 386,
+    "y": 1292
+  },
+  {
+    "time": 2.3116915225982666,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 400,
+    "y": 1292
+  },
+  {
+    "time": 2.3195629119873047,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 420,
+    "y": 1292
+  },
+  {
+    "time": 2.327700614929199,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 442,
+    "y": 1292
+  },
+  {
+    "time": 2.3356142044067383,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 467,
+    "y": 1292
+  },
+  {
+    "time": 2.343705177307129,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 500,
+    "y": 1292
+  },
+  {
+    "time": 2.35081148147583,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 543,
+    "y": 1292
+  },
+  {
+    "time": 2.3596084117889404,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 584,
+    "y": 1292
+  },
+  {
+    "time": 2.3668344020843506,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 630,
+    "y": 1293
+  },
+  {
+    "time": 2.375608205795288,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 665,
+    "y": 1293
+  },
+  {
+    "time": 2.3830175399780273,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 701,
+    "y": 1294
+  },
+  {
+    "time": 2.3910112380981445,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 731,
+    "y": 1294
+  },
+  {
+    "time": 2.39910626411438,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 754,
+    "y": 1296
+  },
+  {
+    "time": 2.4076614379882812,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 781,
+    "y": 1297
+  },
+  {
+    "time": 2.415523052215576,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 803,
+    "y": 1297
+  },
+  {
+    "time": 2.4237005710601807,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 822,
+    "y": 1301
+  },
+  {
+    "time": 2.4316086769104004,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 835,
+    "y": 1302
+  },
+  {
+    "time": 2.4396960735321045,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 850,
+    "y": 1303
+  },
+  {
+    "time": 2.4477009773254395,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 859,
+    "y": 1303
+  },
+  {
+    "time": 2.455700635910034,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 867,
+    "y": 1303
+  },
+  {
+    "time": 2.4636919498443604,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 874,
+    "y": 1303
+  },
+  {
+    "time": 2.471691370010376,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 878,
+    "y": 1303
+  },
+  {
+    "time": 2.4796974658966064,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 879,
+    "y": 1303
+  },
+  {
+    "time": 2.527613878250122,
+    "type": "ButtonEvent",
+    "event_type": "double",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 2.607820510864258,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 2.663130044937134,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 881,
+    "y": 1303
+  },
+  {
+    "time": 2.6716086864471436,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 884,
+    "y": 1303
+  },
+  {
+    "time": 2.6796083450317383,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 886,
+    "y": 1303
+  },
+  {
+    "time": 2.687607765197754,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 886,
+    "y": 1303
+  },
+  {
+    "time": 2.6954221725463867,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 888,
+    "y": 1303
+  },
+  {
+    "time": 2.7036077976226807,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 890,
+    "y": 1303
+  },
+  {
+    "time": 2.711057424545288,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 893,
+    "y": 1303
+  },
+  {
+    "time": 2.719613552093506,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 896,
+    "y": 1303
+  },
+  {
+    "time": 2.72764253616333,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 898,
+    "y": 1302
+  },
+  {
+    "time": 2.7356350421905518,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 902,
+    "y": 1302
+  },
+  {
+    "time": 2.742736577987671,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 905,
+    "y": 1302
+  },
+  {
+    "time": 2.751619815826416,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 909,
+    "y": 1302
+  },
+  {
+    "time": 2.7596113681793213,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 917,
+    "y": 1302
+  },
+  {
+    "time": 2.766714572906494,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 925,
+    "y": 1302
+  },
+  {
+    "time": 2.775407075881958,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 936,
+    "y": 1304
+  },
+  {
+    "time": 2.782811403274536,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 952,
+    "y": 1309
+  },
+  {
+    "time": 2.7916996479034424,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 968,
+    "y": 1314
+  },
+  {
+    "time": 2.798907518386841,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 988,
+    "y": 1316
+  },
+  {
+    "time": 2.8076956272125244,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1015,
+    "y": 1324
+  },
+  {
+    "time": 2.815131664276123,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1040,
+    "y": 1331
+  },
+  {
+    "time": 2.823695421218872,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1068,
+    "y": 1333
+  },
+  {
+    "time": 2.831374168395996,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1099,
+    "y": 1338
+  },
+  {
+    "time": 2.8397088050842285,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1133,
+    "y": 1341
+  },
+  {
+    "time": 2.847161293029785,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1174,
+    "y": 1341
+  },
+  {
+    "time": 2.855712890625,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1212,
+    "y": 1341
+  },
+  {
+    "time": 2.862955093383789,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1258,
+    "y": 1341
+  },
+  {
+    "time": 2.8716084957122803,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1297,
+    "y": 1345
+  },
+  {
+    "time": 2.879460334777832,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1337,
+    "y": 1345
+  },
+  {
+    "time": 2.887606382369995,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1378,
+    "y": 1345
+  },
+  {
+    "time": 2.8956944942474365,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1411,
+    "y": 1345
+  },
+  {
+    "time": 2.903606653213501,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1438,
+    "y": 1345
+  },
+  {
+    "time": 2.910783052444458,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1465,
+    "y": 1345
+  },
+  {
+    "time": 2.9196925163269043,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1492,
+    "y": 1345
+  },
+  {
+    "time": 2.9276084899902344,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1514,
+    "y": 1345
+  },
+  {
+    "time": 2.9357008934020996,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1531,
+    "y": 1345
+  },
+  {
+    "time": 2.9434616565704346,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1545,
+    "y": 1345
+  },
+  {
+    "time": 2.951695203781128,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1558,
+    "y": 1345
+  },
+  {
+    "time": 2.9596095085144043,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1568,
+    "y": 1345
+  },
+  {
+    "time": 2.9675426483154297,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1576,
+    "y": 1345
+  },
+  {
+    "time": 2.9756336212158203,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1584,
+    "y": 1345
+  },
+  {
+    "time": 2.9836456775665283,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1591,
+    "y": 1345
+  },
+  {
+    "time": 2.991624593734741,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1596,
+    "y": 1345
+  },
+  {
+    "time": 2.999687433242798,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1601,
+    "y": 1345
+  },
+  {
+    "time": 3.006824016571045,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1604,
+    "y": 1345
+  },
+  {
+    "time": 3.015608549118042,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1607,
+    "y": 1345
+  },
+  {
+    "time": 3.023205041885376,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1610,
+    "y": 1345
+  },
+  {
+    "time": 3.031609296798706,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1610,
+    "y": 1345
+  },
+  {
+    "time": 3.0952587127685547,
+    "type": "ButtonEvent",
+    "event_type": "double",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 3.1677677631378174,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "left",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 3.2076611518859863,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1612,
+    "y": 1345
+  },
+  {
+    "time": 3.215064287185669,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1614,
+    "y": 1345
+  },
+  {
+    "time": 3.223675012588501,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1618,
+    "y": 1345
+  },
+  {
+    "time": 3.231696128845215,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1622,
+    "y": 1345
+  },
+  {
+    "time": 3.2396080493927,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1628,
+    "y": 1344
+  },
+  {
+    "time": 3.2477219104766846,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1635,
+    "y": 1343
+  },
+  {
+    "time": 3.2555625438690186,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1642,
+    "y": 1340
+  },
+  {
+    "time": 3.2629382610321045,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1651,
+    "y": 1340
+  },
+  {
+    "time": 3.2716963291168213,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1662,
+    "y": 1338
+  },
+  {
+    "time": 3.2795400619506836,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1674,
+    "y": 1336
+  },
+  {
+    "time": 3.2876954078674316,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1685,
+    "y": 1336
+  },
+  {
+    "time": 3.2956693172454834,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1700,
+    "y": 1333
+  },
+  {
+    "time": 3.3033981323242188,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1715,
+    "y": 1333
+  },
+  {
+    "time": 3.311615228652954,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1729,
+    "y": 1333
+  },
+  {
+    "time": 3.3196117877960205,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1748,
+    "y": 1329
+  },
+  {
+    "time": 3.3276724815368652,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1763,
+    "y": 1328
+  },
+  {
+    "time": 3.3356103897094727,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1781,
+    "y": 1327
+  },
+  {
+    "time": 3.343607187271118,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1803,
+    "y": 1323
+  },
+  {
+    "time": 3.35079288482666,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1820,
+    "y": 1320
+  },
+  {
+    "time": 3.359689474105835,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1843,
+    "y": 1319
+  },
+  {
+    "time": 3.3676981925964355,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1865,
+    "y": 1319
+  },
+  {
+    "time": 3.37560772895813,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1885,
+    "y": 1316
+  },
+  {
+    "time": 3.3827834129333496,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1902,
+    "y": 1316
+  },
+  {
+    "time": 3.391234874725342,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1916,
+    "y": 1316
+  },
+  {
+    "time": 3.398885726928711,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1931,
+    "y": 1316
+  },
+  {
+    "time": 3.407417058944702,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1943,
+    "y": 1316
+  },
+  {
+    "time": 3.415619373321533,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1955,
+    "y": 1316
+  },
+  {
+    "time": 3.4234280586242676,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1965,
+    "y": 1316
+  },
+  {
+    "time": 3.4316070079803467,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1976,
+    "y": 1316
+  },
+  {
+    "time": 3.439619779586792,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1985,
+    "y": 1315
+  },
+  {
+    "time": 3.4476468563079834,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1995,
+    "y": 1315
+  },
+  {
+    "time": 3.454867362976074,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2001,
+    "y": 1315
+  },
+  {
+    "time": 3.463608503341675,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2008,
+    "y": 1315
+  },
+  {
+    "time": 3.4712698459625244,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2011,
+    "y": 1315
+  },
+  {
+    "time": 3.4796090126037598,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2014,
+    "y": 1314
+  },
+  {
+    "time": 3.487607717514038,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2016,
+    "y": 1314
+  },
+  {
+    "time": 3.4956765174865723,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2018,
+    "y": 1314
+  },
+  {
+    "time": 3.5036075115203857,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2020,
+    "y": 1314
+  },
+  {
+    "time": 3.5116090774536133,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2020,
+    "y": 1314
+  },
+  {
+    "time": 3.5196073055267334,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2021,
+    "y": 1314
+  },
+  {
+    "time": 3.5356504917144775,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2022,
+    "y": 1314
+  },
+  {
+    "time": 3.6237077713012695,
+    "type": "ButtonEvent",
+    "event_type": "double",
+    "button": "right",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 3.7277703285217285,
+    "type": "ButtonEvent",
+    "event_type": "up",
+    "button": "right",
+    "x": null,
+    "y": null
+  },
+  {
+    "time": 4.4841883182525635,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2020,
+    "y": 1314
+  },
+  {
+    "time": 4.4871826171875,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2019,
+    "y": 1314
+  },
+  {
+    "time": 4.504136085510254,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2018,
+    "y": 1314
+  },
+  {
+    "time": 4.508124828338623,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2016,
+    "y": 1314
+  },
+  {
+    "time": 4.511117458343506,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2013,
+    "y": 1313
+  },
+  {
+    "time": 4.519096374511719,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2013,
+    "y": 1312
+  },
+  {
+    "time": 4.527073860168457,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2011,
+    "y": 1312
+  },
+  {
+    "time": 4.535053730010986,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2009,
+    "y": 1312
+  },
+  {
+    "time": 4.543032884597778,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2006,
+    "y": 1312
+  },
+  {
+    "time": 4.551033973693848,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2004,
+    "y": 1312
+  },
+  {
+    "time": 4.55951452255249,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 2000,
+    "y": 1312
+  },
+  {
+    "time": 4.567225456237793,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1995,
+    "y": 1312
+  },
+  {
+    "time": 4.5755462646484375,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1991,
+    "y": 1312
+  },
+  {
+    "time": 4.583444118499756,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1987,
+    "y": 1312
+  },
+  {
+    "time": 4.591545581817627,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1984,
+    "y": 1312
+  },
+  {
+    "time": 4.599550724029541,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1982,
+    "y": 1312
+  },
+  {
+    "time": 4.6075499057769775,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1981,
+    "y": 1312
+  },
+  {
+    "time": 4.615687847137451,
+    "type": "MoveEvent",
+    "event_type": null,
+    "button": null,
+    "x": 1980,
+    "y": 1312
+  }
+]
