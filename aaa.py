@@ -8,12 +8,6 @@ from selenium.webdriver.chrome.options import Options
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
-uid_file = os.path.join(base_dir, 'uid.txt')
-list_file = os.path.join(base_dir, 'list')
-log_file = os.path.join(base_dir,'循环记录.txt')
-collections = set()
-userids = set()
-########################################################################################################################
 
 
 
@@ -28,9 +22,9 @@ options.add_argument(f'--user-data-dir={user_data_dir}')
 options.binary_location = chrome_binary_path
 options.add_argument('--proxy-server="direct://"')
 options.add_argument('--proxy-bypass-list=*')
-# options.add_argument("--disable-gpu")
-# options.add_argument("--disable-sync")
-# options.add_argument("disable-cache")  # 禁用缓存
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-sync")
+options.add_argument("disable-cache")
 options.add_experimental_option("prefs",
                                 {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
