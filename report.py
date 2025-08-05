@@ -13,19 +13,36 @@ import random
 import time
 
 
-def ease_out_quart(t):
-    return 1 - pow(1 - t, 4)
+import random
 
+# 匀加速运动位置函数：s = 0.5 * a * t^2
+def ease_out_quart(T, a):
+    return 0.5 * a * T * T
 
-# 生成从 (x0, y0) 到 (x1, y1) 的缓动轨迹
+# 生成从 (x0, y0) 到 (x1, y1) 的匀加速轨迹
 def generate_track(x0, y0, x1, y1, steps=60):
     track = []
+
+    dx = x1 - x0
+    dy = y1 - y0
+
+    # 随机生成 Y 轴加速度，范围可调
+    ay = random.uniform(0.002, 0.01)
+    ax = ay * 2
+
+    # 总时间归一化为1，steps是分段数
     for i in range(steps + 1):
-        t = i / steps
-        xt = x0 + (x1 - x0) * ease_out_quart(t)
-        yt = y0 + (y1 - y0) * ease_out_quart(t)
+        T = i / steps
+        sx = ease_out_quart(T, ax)
+        sy = ease_out_quart(T, ay)
+
+        xt = x0 + dx * sx / ease_out_quart(1, ax)
+        yt = y0 + dy * sy / ease_out_quart(1, ay)
+
         track.append([xt - x0, yt - y0])  # 相对坐标
+
     return track
+
 
 
 
@@ -68,7 +85,7 @@ except Exception as e:
     exit(0)
 
 if not uids:
-    print("uid.txt 文件中没有可处理的UID，程序退出")
+    print("UID文件中没有可处理的UID，程序退出")
     exit(0)
 
 
@@ -84,9 +101,9 @@ options.add_argument(f'--user-data-dir={user_data_dir}')
 options.binary_location = chrome_binary_path
 options.add_argument('--proxy-server="direct://"')
 options.add_argument('--proxy-bypass-list=*')
-# options.add_argument("--disable-gpu")
-# options.add_argument("--disable-sync")
-# options.add_argument("disable-cache")  # 禁用缓存
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-sync")
+options.add_argument("disable-cache")
 options.add_experimental_option("prefs",
                                 {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
@@ -97,6 +114,7 @@ driver.get('https://www.goofish.com/')
 
 driver.set_window_size(500, 700)  # 设置浏览器窗口大小（宽度, 高度）
 driver.set_window_position(0, 0)  # 左上角坐标为 (0, 0)
+#driver.set_window_position(-500, -700)  # 左上角坐标为 (0, 0)
 
 #time.sleep(1000)
 
