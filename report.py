@@ -20,8 +20,7 @@ import random
 
 
 import time
-import pyautogui
-import math
+
 
 # x轴：ease out quart 缓动
 def ease_out_quart(t):
@@ -29,7 +28,9 @@ def ease_out_quart(t):
 
 # y轴：正弦波函数
 def y_wave(t):
-    return 10 * math.sin(4 * math.pi * t)  # 振幅10，2个完整波形
+    base =  1 - pow(1 - t, 4)
+    jitter = random.uniform(-600, 600)  # 添加上下±3像素随机扰动
+    return base + jitter
 
 # 自定义 tween 函数，返回 t 归一化下的 (x, y)
 def combined_tween(t):
