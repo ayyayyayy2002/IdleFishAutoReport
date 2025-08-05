@@ -1,4 +1,6 @@
 import string
+
+from selenium.common import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -48,6 +50,7 @@ def generate_track(x0, y0, x1, y1, steps=60):
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
 uid_file = os.path.join(base_dir, 'uid')
+list_file = os.path.join(base_dir, 'list')
 uids = []
 
 
@@ -70,7 +73,7 @@ if not uids:
 
 
 
-# 假设这两行在你代码里已定义，无需改动也不赋值
+
 user_data_dir = os.path.join(base_dir, 'User Data')
 chrome_binary_path = os.path.join(base_dir, 'chrome-win', 'chrome.exe')
 executable_path= os.path.join(base_dir, 'chrome-win', 'chromedriver.exe')
@@ -131,6 +134,16 @@ for uid in uids:
         print(itemids)
     except Exception as e:
         print('无商品')
+        try:
+            with open(list_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            with open(list_file, 'w', encoding='utf-8') as f:
+                for line in lines:
+                    if line.strip() != uid:
+                        f.write(line)
+            print(f"删除UID: {uid}")
+        except Exception as e:
+            print(f"删除UID时发生错误: {e}")
         continue
 
     for itemid in itemids:
@@ -206,60 +219,60 @@ for uid in uids:
             element_submit_report.click()
             print('提交表单')
             time.sleep(1.5)
-            max_attempts = 3
-            attempts = 0
 
 
-            print('发现验证码')
-            iframe = driver.find_element(By.ID, "baxia-dialog-content")
-            driver.switch_to.frame(iframe)
-            slider = WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located((By.ID, 'nc_1_n1z'))
-            )
-            rect = slider.rect
-            x0 = rect['x'] + rect['width'] / 2
-            y0 = rect['y'] + rect['height'] / 2
-            distance = 500
-            jitter = random.uniform(-300, 300)
-            track = generate_track(x0, y0, x0 + distance, y0 + jitter)
+            try:
+                iframe = driver.find_element(By.ID, "baxia-dialog-content")
+                print('发现验证码')
+                driver.switch_to.frame(iframe)
+                slider = driver.find_element(By.ID, 'nc_1_n1z')  # 你的滑块元素
+                rect = slider.rect
+                x0 = rect['x'] + rect['width'] / 2
+                y0 = rect['y'] + rect['height'] / 2
+                distance = 500
+                jitter = random.uniform(-300, 300)
+                track = generate_track(x0, y0, x0 + distance, y0 + jitter)
 
-            # 拖动滑块的 JS 脚本
-            drag_script = """
-            const element = arguments[0];
-            const moves = arguments[1];
-            const callback = arguments[arguments.length - 1];  // Selenium 提供的回调
+                # 拖动滑块的 JS 脚本
+                drag_script = """
+                const element = arguments[0];
+                const moves = arguments[1];
+                const rect = element.getBoundingClientRect();
+                const startX = rect.left + rect.width / 2;
+                const startY = rect.top + rect.height / 2;
 
-            const rect = element.getBoundingClientRect();
-            const startX = rect.left + rect.width / 2;
-            const startY = rect.top + rect.height / 2;
+                const dispatchMouseEvent = (type, x, y) => {
+                    const event = new MouseEvent(type, {
+                        clientX: x,
+                        clientY: y,
+                        bubbles: true
+                    });
+                    element.dispatchEvent(event);
+                };
 
-            const dispatchMouseEvent = (type, x, y) => {
-                const event = new MouseEvent(type, {
-                    clientX: x,
-                    clientY: y,
-                    bubbles: true
-                });
-                element.dispatchEvent(event);
-            };
+                dispatchMouseEvent('mousedown', startX, startY);
 
-            dispatchMouseEvent('mousedown', startX, startY);
-
-            let i = 0;
-            function step() {
-                if (i >= moves.length) {
-                    dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
-                    callback();  // 告诉 Selenium 异步执行结束
-                    return;
+                let i = 0;
+                function step() {
+                    if (i >= moves.length) {
+                        dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
+                        return;
+                    }
+                    const [dx, dy] = moves[i];
+                    dispatchMouseEvent('mousemove', startX + dx, startY + dy);
+                    i++;
+                    requestAnimationFrame(step);
                 }
-                const [dx, dy] = moves[i];
-                dispatchMouseEvent('mousemove', startX + dx, startY + dy);
-                i++;
                 requestAnimationFrame(step);
-            }
-            requestAnimationFrame(step);
-            """
+                """
 
-            driver.execute_async_script(drag_script, slider, track)
+                driver.execute_script(drag_script, slider, track)
+                time.sleep(2)
+            except NoSuchElementException as e:
+                print('无验证码:', str(e))
+
+
+
 
 
 
