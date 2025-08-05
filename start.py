@@ -6,9 +6,6 @@ import os
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
-log_file = os.path.join(base_dir,'运行记录','循环记录')
-log_directory = os.path.join(base_dir, '运行记录')
-os.makedirs(log_directory, exist_ok=True)
 skip = True
 
 
@@ -34,11 +31,8 @@ while True:
         print('首次运行跳过')
         skip = False
     while True:
-        #report_process.wait()  # 不等待 SpaceAndDynamic.py 结束
+
         print('启动Report.py')
-        with open(log_file, 'a', encoding='utf-8') as log:
-            timestamp = datetime.now().strftime('[%Y-%m-%d %H-%M-%S]')
-            log.write(f'{timestamp}开始\n')
         report_process = subprocess.Popen([sys.executable, 'report.py'])
         report_process.wait()  # 等待 Report.py 结束
 
