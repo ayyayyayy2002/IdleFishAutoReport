@@ -1,9 +1,10 @@
+import random
 import re
 import os
 import traceback
 import time
 
-
+from selenium.common import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -14,13 +15,42 @@ from selenium.webdriver.chrome.options import Options
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
-uid_file = os.path.join(base_dir, 'uid.txt')
+uid_file = os.path.join(base_dir, 'uid')
 list_file = os.path.join(base_dir, 'list')
-log_file = os.path.join(base_dir,'循环记录.txt')
 collections = set()
 userids = set()
 
 ########################################################################################################################
+import random
+
+# 匀加速运动位置函数：s = 0.5 * a * t^2
+def ease_out_quart(T, a):
+    return 0.5 * a * T * T
+
+# 生成从 (x0, y0) 到 (x1, y1) 的匀加速轨迹
+def generate_track(x0, y0, x1, y1, steps=60):
+    track = []
+
+    dx = x1 - x0
+    dy = y1 - y0
+
+    # 随机生成 Y 轴加速度，范围可调
+    ay = random.uniform(0.002, 0.01)
+    ax = ay * 2
+
+    # 总时间归一化为1，steps是分段数
+    for i in range(steps + 1):
+        T = i / steps
+        sx = ease_out_quart(T, ax)
+        sy = ease_out_quart(T, ay)
+
+        xt = x0 + dx * sx / ease_out_quart(1, ax)
+        yt = y0 + dy * sy / ease_out_quart(1, ay)
+
+        track.append([xt - x0, yt - y0])  # 相对坐标
+
+    return track
+
 
 
 user_data_dir = os.path.join(base_dir, 'User Data')
@@ -33,9 +63,9 @@ options.add_argument(f'--user-data-dir={user_data_dir}')
 options.binary_location = chrome_binary_path
 options.add_argument('--proxy-server="direct://"')
 options.add_argument('--proxy-bypass-list=*')
-# options.add_argument("--disable-gpu")
-# options.add_argument("--disable-sync")
-# options.add_argument("disable-cache")  # 禁用缓存
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-sync")
+options.add_argument("disable-cache")
 options.add_experimental_option("prefs",
                                 {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
@@ -47,6 +77,7 @@ driver.get('https://www.goofish.com/collection')
 time.sleep(10)
 driver.set_window_size(500, 700)  # 设置浏览器窗口大小（宽度, 高度）
 driver.set_window_position(0, 0)  # 左上角坐标为 (0, 0)
+#driver.set_window_position(-500, -700)  # 左上角坐标为 (0, 0)
 
 
 
@@ -88,6 +119,60 @@ for collection in collections:
     try:
 
         driver.get(f'https://www.goofish.com/item?id={collection}')
+        try:
+            iframe = driver.find_element(By.ID, "baxia-dialog-content")
+            print('发现验证码')
+            driver.switch_to.frame(iframe)
+            slider = driver.find_element(By.ID, 'nc_1_n1z')  # 你的滑块元素
+            rect = slider.rect
+            x0 = rect['x'] + rect['width'] / 2
+            y0 = rect['y'] + rect['height'] / 2
+            distance = 500
+            jitter = random.uniform(-300, 300)
+            track = generate_track(x0, y0, x0 + distance, y0 + jitter)
+
+            # 拖动滑块的 JS 脚本
+            drag_script = """
+            const element = arguments[0];
+            const moves = arguments[1];
+            const rect = element.getBoundingClientRect();
+            const startX = rect.left + rect.width / 2;
+            const startY = rect.top + rect.height / 2;
+
+            const dispatchMouseEvent = (type, x, y) => {
+                const event = new MouseEvent(type, {
+                    clientX: x,
+                    clientY: y,
+                    bubbles: true
+                });
+                element.dispatchEvent(event);
+            };
+
+            dispatchMouseEvent('mousedown', startX, startY);
+
+            let i = 0;
+            function step() {
+                if (i >= moves.length) {
+                    dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
+                    return;
+                }
+                const [dx, dy] = moves[i];
+                dispatchMouseEvent('mousemove', startX + dx, startY + dy);
+                i++;
+                requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+            """
+
+            driver.execute_script(drag_script, slider, track)
+            time.sleep(2)
+        except NoSuchElementException as e:
+            print('无验证码:', str(e))
+
+
+
+
+
         element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, 'a[href*="userId"]'))
         )
