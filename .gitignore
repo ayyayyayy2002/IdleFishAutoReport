@@ -2,3 +2,4 @@
 /venv/
 /chrome-win/
 /User Data/
+*.pyc
