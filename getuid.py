@@ -25,6 +25,7 @@ userids = set()
 
 user_data_dir = os.path.join(base_dir, 'User Data')
 chrome_binary_path = os.path.join(base_dir, 'chrome-win', 'chrome.exe')
+executable_path= os.path.join(base_dir, 'chrome-win', 'chromedriver.exe')
 
 options = Options()
 options.add_argument("--disable-blink-features=AutomationControlled")
@@ -38,7 +39,7 @@ options.add_argument('--proxy-bypass-list=*')
 options.add_experimental_option("prefs",
                                 {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
-service = Service(executable_path="chromedriver.exe")
+service = Service(executable_path=executable_path)
 driver = webdriver.Chrome(service=service, options=options)
 
 driver.get('https://www.goofish.com/collection')
@@ -46,41 +47,6 @@ driver.get('https://www.goofish.com/collection')
 time.sleep(10)
 driver.set_window_size(500, 700)  # 设置浏览器窗口大小（宽度, 高度）
 driver.set_window_position(0, 0)  # 左上角坐标为 (0, 0)
-
-
-
-
-'''
-try:
-    WebDriverWait(driver, 5).until(
-        EC.frame_to_be_available_and_switch_to_it((By.ID, "alibaba-login-box"))  # 根据 ID 切换到 iframe
-    )
-
-    password_login_tab = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.CLASS_NAME, "password-login-tab-item"))  # 根据 class 定位
-    )
-    password_login_tab.click()
-
-    fm_login_id = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.ID, "fm-login-id"))  # 根据 ID 定位输入框
-    )
-    fm_login_id.send_keys(id)
-
-    fm_login_password = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.ID, "fm-login-password"))  # 根据 ID 定位输入框
-    )
-    fm_login_password.send_keys(password)
-
-    command = 'KeymouseGo_v5_2-win.exe 登录验证码.json5'
-    subprocess.run(command, shell=True)
-    time.sleep(3)
-except Exception as e:
-    print(e)
-'''
-
-
-
-
 
 
 
