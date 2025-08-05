@@ -1,2 +1,2 @@
 mouse
-selenium
+undetected_chromedriver
