@@ -1,18 +1,95 @@
-import random
 import string
-import subprocess
-from dotenv import load_dotenv
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
-import undetected_chromedriver as uc
-import time
 import re
 import os
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+import time
+import random
+
+
+
+
+
+
+
+
+
+
+import time
+import pyautogui
+import math
+
+# x轴：ease out quart 缓动
+def ease_out_quart(t):
+    return 1 - pow(1 - t, 4)
+
+# y轴：正弦波函数
+def y_wave(t):
+    return 10 * math.sin(4 * math.pi * t)  # 振幅10，2个完整波形
+
+# 自定义 tween 函数，返回 t 归一化下的 (x, y)
+def combined_tween(t):
+    # pyautogui 只用 x 的 tween，我们将其塞进 moveTo 的参数中，y 不直接支持
+    # 所以我们做的是：让 x 按 tween 移动，y 先记住，在最终调用 moveTo 时再用
+    combined_tween.last_y = y_wave(t)
+    return ease_out_quart(t)
+
+combined_tween.last_y = 0  # 初始化 y 值
+
+def drag_with_custom_y(distance=500, duration=1.0):
+    start_x, start_y = pyautogui.position()
+    pyautogui.mouseDown()
+
+    # 移动时只指定 x 轴路径，y 轴在 tween 中计算出并取出
+    pyautogui.moveTo(
+        start_x + distance,
+        start_y,  # y 轴暂时写死，真正值在下面调整
+        duration=duration,
+        tween=combined_tween
+    )
+
+    # 最终再把 y 轴“校正”到最后 tween 轨迹的 y 值
+    pyautogui.moveTo(
+        start_x + distance,
+        start_y + combined_tween.last_y
+    )
+
+    pyautogui.mouseUp()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
-uid_file = os.path.join(base_dir, 'uid.txt')
+uid_file = os.path.join(base_dir, 'uid')
 uids = []
 
 
@@ -32,35 +109,13 @@ except Exception as e:
 if not uids:
     print("uid.txt 文件中没有可处理的UID，程序退出")
     exit(0)
-"""
-version_main = 121
-user_data_dir = os.path.join(base_dir, 'User Data')
-chrome_binary_path = os.path.join(base_dir, 'chrome-win', 'chrome.exe')
-options = uc.ChromeOptions()
-options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument(f'--user-data-dir={user_data_dir}')
-options.binary_location = chrome_binary_path
-options.add_argument('--proxy-server="direct://"')
-options.add_argument('--proxy-bypass-list=*')
-#options.add_argument("--disable-gpu")
-#options.add_argument("--disable-sync")
-#options.add_argument("disable-cache")  # 禁用缓存
-options.add_experimental_option("prefs",
-                                {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
-driver = uc.Chrome(options=options, version_main=version_main, driver_executable_path="chromedriver.exe")
-options.add_experimental_option("prefs",
-                                {"credentials_enable_service": False, "profile.password_manager_enabled": False})
-driver.get(f'https://www.goofish.com/collection')
-"""
-import os
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+
 
 # 假设这两行在你代码里已定义，无需改动也不赋值
 user_data_dir = os.path.join(base_dir, 'User Data')
 chrome_binary_path = os.path.join(base_dir, 'chrome-win', 'chrome.exe')
+executable_path= os.path.join(base_dir, 'chrome-win', 'chromedriver.exe')
 
 options = Options()
 options.add_argument("--disable-blink-features=AutomationControlled")
@@ -74,41 +129,18 @@ options.add_argument('--proxy-bypass-list=*')
 options.add_experimental_option("prefs",
                                 {"credentials_enable_service": False, "profile.password_manager_enabled": False})
 
-service = Service(executable_path="chromedriver.exe")
+service = Service(executable_path=executable_path)
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get('https://www.goofish.com/collection')
+driver.get('https://www.goofish.com/')
 
 driver.set_window_size(500, 700)  # 设置浏览器窗口大小（宽度, 高度）
-driver.set_window_position(0, -10)  # 左上角坐标为 (0, 0)
+driver.set_window_position(0, 0)  # 左上角坐标为 (0, 0)
 
 #time.sleep(1000)
 
-try:
-    WebDriverWait(driver, 5).until(
-        EC.frame_to_be_available_and_switch_to_it((By.ID, "alibaba-login-box"))  # 根据 ID 切换到 iframe
-    )
 
-    password_login_tab = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.CLASS_NAME, "password-login-tab-item"))  # 根据 class 定位
-    )
-    password_login_tab.click()
-
-    fm_login_id = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.ID, "fm-login-id"))  # 根据 ID 定位输入框
-    )
-    fm_login_id.send_keys(id)
-
-    fm_login_password = WebDriverWait(driver, 5).until(
-        EC.element_to_be_clickable((By.ID, "fm-login-password"))  # 根据 ID 定位输入框
-    )
-    fm_login_password.send_keys("aaa")
-
-    command = 'KeymouseGo_v5_2-win.exe 登录验证码.json5'
-    subprocess.run(command, shell=True)
-    time.sleep(3)
-except Exception as e:
-    print(e)
+time.sleep(3)
 
 for uid in uids:
     itemids = set()
@@ -199,7 +231,7 @@ for uid in uids:
                     (By.XPATH, '/html/body/div/div/div[4]/div/div[1]/div/div[2]/div/div[2]/textarea'))
             )
 
-            element_input_reason.send_keys(str(pagenumber)+str(reasonnumber)+'站外微信引流诈骗，骗取钱财，色情网站推广'+''.join(random.choices(string.ascii_letters + string.digits, k=30)))
+            element_input_reason.send_keys(str(pagenumber)+str(reasonnumber)+'gdfgff'+''.join(random.choices(string.ascii_letters + string.digits, k=30)))
             print('输入文字')
 
             # 允许消息
@@ -224,14 +256,39 @@ for uid in uids:
                     element = driver.find_element(By.XPATH, '//*[@id="baxia-dialog-content"]')
                     if element.is_displayed():
                         print('发现验证码')
-                        #time.sleep(1000)
+                        iframe = driver.find_element(By.ID, "baxia-dialog-content")
+                        driver.switch_to.frame(iframe)
+                        slider = driver.find_element(By.ID, 'nc_1_n1z')  # 你的滑块元素
 
-                        random_number = random.randint(1, 5)
-                        command = f'KeymouseGo_v5_2-win.exe 表单验证码{str(random_number)}.json5'
-                        subprocess.run(command, shell=True)
+                        import pyautogui
 
-                        attempts += 1
-                        time.sleep(2)  # 可选：给验证码处理一点反应时间
+                        button_location = pyautogui.locateOnScreen('button.png', confidence=0.8)
+
+                        if button_location:
+                            print(f"按钮位置：{button_location}")
+
+                            # 计算中心点坐标
+                            center_x = button_location.left + button_location.width // 2
+                            center_y = button_location.top + button_location.height // 2
+                            print(f"中心点坐标：({center_x}, {center_y})")
+
+                            # 移动鼠标到中心点
+                            pyautogui.moveTo(center_x, center_y, duration=0.3)
+                        else:
+                            print("❌ 没找到按钮图像")
+
+                        drag_with_custom_y(distance=500, duration=0.5)
+
+
+
+
+
+
+
+
+
+
+
                     else:
                         print("元素不可见")
                         break
