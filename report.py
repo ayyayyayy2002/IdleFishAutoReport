@@ -22,45 +22,15 @@ import random
 import time
 
 
-# x轴：ease out quart 缓动
-def ease_out_quart(t):
-    return 1 - pow(1 - t, 4)
+def ease_out_quart(x):
+    return 1 - pow(1 - x, 4)
 
-# y轴：正弦波函数
-def y_wave(t):
-    base =  1 - pow(1 - t, 4)
-    jitter = random.uniform(-600, 600)  # 添加上下±3像素随机扰动
-    return base + jitter
-
-# 自定义 tween 函数，返回 t 归一化下的 (x, y)
-def combined_tween(t):
-    # pyautogui 只用 x 的 tween，我们将其塞进 moveTo 的参数中，y 不直接支持
-    # 所以我们做的是：让 x 按 tween 移动，y 先记住，在最终调用 moveTo 时再用
-    combined_tween.last_y = y_wave(t)
-    return ease_out_quart(t)
-
-combined_tween.last_y = 0  # 初始化 y 值
-
-def drag_with_custom_y(distance=500, duration=1.0):
+def accelerate_drag(distance=500, duration=0.5):
     start_x, start_y = pyautogui.position()
+    jitter = random.uniform(-300, 300)  # 添加上下±3像素随机扰动
     pyautogui.mouseDown()
-
-    # 移动时只指定 x 轴路径，y 轴在 tween 中计算出并取出
-    pyautogui.moveTo(
-        start_x + distance,
-        start_y,  # y 轴暂时写死，真正值在下面调整
-        duration=duration,
-        tween=combined_tween
-    )
-
-    # 最终再把 y 轴“校正”到最后 tween 轨迹的 y 值
-    pyautogui.moveTo(
-        start_x + distance,
-        start_y + combined_tween.last_y
-    )
-
+    pyautogui.moveTo(start_x + distance, start_y+jitter, duration=duration, tween=ease_out_quart)
     pyautogui.mouseUp()
-
 
 
 
@@ -261,6 +231,81 @@ for uid in uids:
                         driver.switch_to.frame(iframe)
                         slider = driver.find_element(By.ID, 'nc_1_n1z')  # 你的滑块元素
 
+                        rect = slider.rect
+                        x0 = rect['x'] + rect['width'] / 2
+                        y0 = rect['y'] + rect['height'] / 2
+                        distance = 500
+                        jitter = random.uniform(-300, 300)
+                        import math
+
+
+                        # 缓出函数
+                        def ease_out_quart(t):
+                            return 1 - pow(1 - t, 4)
+
+
+                        # 生成从 (x0, y0) 到 (x1, y1) 的缓动轨迹
+                        def generate_track(x0, y0, x1, y1, steps=60):
+                            track = []
+                            for i in range(steps + 1):
+                                t = i / steps
+                                xt = x0 + (x1 - x0) * ease_out_quart(t)
+                                yt = y0 + (y1 - y0) * ease_out_quart(t)
+                                track.append([xt - x0, yt - y0])  # 相对坐标
+                            return track
+
+
+                        # 生成轨迹
+                        track = generate_track(x0, y0, x0 + distance, y0 + jitter)
+
+                        # 拖动滑块的 JS 脚本
+                        drag_script = """
+                        const element = arguments[0];
+                        const moves = arguments[1];
+                        const rect = element.getBoundingClientRect();
+                        const startX = rect.left + rect.width / 2;
+                        const startY = rect.top + rect.height / 2;
+
+                        const dispatchMouseEvent = (type, x, y) => {
+                            const event = new MouseEvent(type, {
+                                clientX: x,
+                                clientY: y,
+                                bubbles: true
+                            });
+                            element.dispatchEvent(event);
+                        };
+
+                        dispatchMouseEvent('mousedown', startX, startY);
+
+                        let i = 0;
+                        function step() {
+                            if (i >= moves.length) {
+                                dispatchMouseEvent('mouseup', startX + moves[moves.length - 1][0], startY + moves[moves.length - 1][1]);
+                                return;
+                            }
+                            const [dx, dy] = moves[i];
+                            dispatchMouseEvent('mousemove', startX + dx, startY + dy);
+                            i++;
+                            requestAnimationFrame(step);
+                        }
+                        requestAnimationFrame(step);
+                        """
+
+                        # 执行拖动
+                        driver.execute_script(drag_script, slider, track)
+
+                        # 等待动画结束
+                        time.sleep(3)
+
+
+
+
+
+
+
+
+                        '''
+
                         import pyautogui
 
                         button_location = pyautogui.locateOnScreen('button.png', confidence=0.8)
@@ -278,7 +323,8 @@ for uid in uids:
                         else:
                             print("❌ 没找到按钮图像")
 
-                        drag_with_custom_y(distance=500, duration=0.5)
+                        accelerate_drag(distance=500, duration=0.5)
+                        '''
 
 
 
