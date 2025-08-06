@@ -1,5 +1,4 @@
 import string
-
 from selenium.common import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -9,10 +8,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-import random
 import time
-
-
 import random
 
 # 匀加速运动位置函数：s = 0.5 * a * t^2
@@ -51,19 +47,6 @@ def generate_track(x0, y0, x1, y1, steps=60):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ########################################################################################################################
 uid_file = os.path.join(base_dir, 'uid')
@@ -82,7 +65,7 @@ try:
                 uids.append(line)
 except Exception as e:
     print(f"无法读取UID文件: {e}")
-    exit(0)
+
 
 if not uids:
     print("UID文件中没有可处理的UID，程序退出")
@@ -288,22 +271,6 @@ for uid in uids:
                 time.sleep(2)
             except NoSuchElementException as e:
                 print('无验证码:', str(e))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         except Exception as e:
