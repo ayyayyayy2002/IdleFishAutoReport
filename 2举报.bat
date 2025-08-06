@@ -1,7 +1,7 @@
 =@echo off
 chcp 65001
 setlocal
-.venv\Scripts\python.exe start.py
+python-3.10.11\python.exe start.py
 popd
 pause
 endlocal
