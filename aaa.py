@@ -32,5 +32,8 @@ service = Service(executable_path=executable_path)
 driver = webdriver.Chrome(service=service, options=options)
 
 driver.get('https://www.goofish.com/collection')
+driver.set_window_size(500, 700)  # 设置浏览器窗口大小（宽度, 高度）
+driver.set_window_position(0, 0)  # 左上角坐标为 (0, 0)
+#driver.set_window_position(-500, -700)  # 左上角坐标为 (0, 0)
 
 time.sleep(1000)
