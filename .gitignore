@@ -1,0 +1,6 @@
+/.idea/
+/python-3.10.11/
+/venv/
+/chrome-win/
+/User Data/
+*.pyc
